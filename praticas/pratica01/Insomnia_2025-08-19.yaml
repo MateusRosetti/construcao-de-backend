@@ -1,0 +1,172 @@
+type: collection.insomnia.rest/5.0
+name: My first collection
+meta:
+  id: wrk_f9a63cf46a9d44d0961567098a7a5068
+  created: 1755646842024
+  modified: 1755646842024
+  description: ""
+collection:
+  - url: http://localhost:3000/tarefas
+    name: My first request
+    meta:
+      id: req_3db764f0dbd649cd97b7a22656695b40
+      created: 1755646842163
+      modified: 1755647134969
+      isPrivate: false
+      description: ""
+      sortKey: -1755646842163
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas
+    name: My first request
+    meta:
+      id: req_12f1146aa6304c3a953b8b7c333c3204
+      created: 1755647146644
+      modified: 1755647287360
+      isPrivate: false
+      description: ""
+      sortKey: -1755646404104.5
+    method: POST
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas/702d
+    name: New Request
+    meta:
+      id: req_1c6215a85b1d40b09b448fab443b6f4b
+      created: 1755647346180
+      modified: 1755647598153
+      isPrivate: false
+      description: ""
+      sortKey: -1755647346180
+    method: GET
+    body:
+      mimeType: application/graphql
+      text: ""
+    headers:
+      - name: User-Agent
+        value: insomnia/11.4.0
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas/702d
+    name: New Request
+    meta:
+      id: req_3ef635fcaa4b479f9f2fee666bd885b1
+      created: 1755647559692
+      modified: 1755647579623
+      isPrivate: false
+      description: ""
+      sortKey: -1755647559692
+    method: PUT
+    body:
+      mimeType: application/graphql
+      text: ""
+    headers:
+      - name: User-Agent
+        value: insomnia/11.4.0
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas/702d
+    name: New Request
+    meta:
+      id: req_e5d38cacdb644404b65ca886546eece4
+      created: 1755647615747
+      modified: 1755647657223
+      isPrivate: false
+      description: ""
+      sortKey: -1755647615747
+    method: PATCH
+    body:
+      mimeType: application/graphql
+      text: ""
+    headers:
+      - name: User-Agent
+        value: insomnia/11.4.0
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas/702d
+    name: New Request
+    meta:
+      id: req_af95c7273b1d4ced86d76c7d1cffdf94
+      created: 1755647659961
+      modified: 1755647676582
+      isPrivate: false
+      description: ""
+      sortKey: -1755647659961
+    method: DELETE
+    body:
+      mimeType: application/graphql
+      text: ""
+    headers:
+      - name: User-Agent
+        value: insomnia/11.4.0
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_02aff2478f7b5714681a353fe831471c596814cb
+    created: 1755646842045
+    modified: 1755646842045
+environments:
+  name: Base Environment
+  meta:
+    id: env_02aff2478f7b5714681a353fe831471c596814cb
+    created: 1755646842041
+    modified: 1755646842041
+    isPrivate: false
