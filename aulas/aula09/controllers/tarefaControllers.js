@@ -1,23 +1,39 @@
-function listar(req,res){
-    return res.json({});
+const tarefa = require('../models/tarefaModel');
 
+
+ async function listar(req,res){
+    try{
+    const tarefas = await tarefa.find({});
+    return res.json(tarefas);
+    }catch(err){
+        res.status(500).json({msg:"deu ruim" +err.messagem});
+      }
+    }
+
+async function criar(req,res){
+    const novaTarefa = await tarefa.create({
+        nome:req.body.nome,
+        concluida:false,
+    });
+    return res.status(201).json(novaTarefa);
 }
 
-function criar(req,res){
-    return res.status(201).json({});
-}
-
-function buscar(req,res){
+ async function buscar(req,res,next){
     const { id } = req.params;
+    const tarefaEncontrada = await tarefa.findOne({_id:id});
     next();
 }
 function exibir(req,res){
     return res.json({});
 }
-function atualizar(req,res){
+ async function atualizar(req,res){
+    const {id} =req.params;
+    const tarefaAtualizada = await tarefa.findOneAndUpdate({_id:id},{...req.body});
     return res.json({})
 }
-function remover(req,res){
+ async function remover(req,res){
+    const {id} = req.params;
+    const tarefaRemover = await tarefa.findOneAndDelete({_id:id})
     return res.status(204).end();
 }
 
