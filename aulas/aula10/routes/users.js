@@ -20,4 +20,6 @@ try{
   return res.status(401).json({msg:"credenciais invalidas"});
 });
 
+router.post('/renovar',auth.verificarToken,auth.renovarToken);
+
 module.exports = router;
