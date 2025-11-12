@@ -1,0 +1,100 @@
+
+openapi: "3.0.0"
+info:
+  title:
+  description:
+  version:   
+servers:
+ - url: http://localhost:3000
+   description: Ambiente de desenvolvimento
+tags:
+ - produtos
+paths:
+  /produtos:
+    get:
+      produtos:
+        200:
+          description: Uma lista de produtos
+          content: 
+            application/json:
+              ArrayOfProdutos 
+          
+        
+    post:
+      produtos:
+        201:
+          description: Produto criado com sucesso
+          content:
+            aplication/json
+              produto
+        422:
+          description: Nome e preço sao obrigatorios
+            
+      description: Um JSON com dados do novo produto
+      required: true
+      content:
+        aplication/json:
+          produto
+  /produtos/{produtoid}:
+    get:
+      produtos: 
+        parameters:
+          in: path
+          name: produtoId
+          required: true
+          description: id do produto a ser buscado
+        200:
+          description: um json com os dados do produto encontrado
+          content:
+            aplication/json
+              Produto
+        404:
+          description: produto nao encontrado
+    put:
+      produtos:
+        parameters:
+          in: path
+          name: produtoId
+          required: true
+          description: id do produto a ser buscado
+        description: um json com dados do produto a atualizar
+        required: true
+        content:
+          aplication/json
+            Produto
+        200:
+          description: um json com dados do produto atualizado
+          content:
+            aplication/json
+              Produto
+        404:
+          description: Produto nao encontrado
+        422:
+          description: nome e preco sao obrigatorios
+    delete:
+      produtos:
+        parameters:
+          in: path
+          name: produtoId
+          required: true
+          description: id do produto a ser buscado
+        204:
+          description: produto removido com sucesso
+        404:
+          description: produto nao encontrado
+       
+components:
+  schemas:
+    ArrayOfProdutos:
+      type: array
+      items: $ref:#/components/schemas/Produto
+    Produto:
+      type: object
+      properties:
+        id:
+          type: string
+        nome:
+          type: string
+        preco:
+          type: number  
+      
